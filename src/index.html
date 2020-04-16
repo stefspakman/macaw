@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+
+  <script type="module" src="/build/macaw-components.esm.js"></script>
+  <script nomodule src="/build/macaw-components.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      height: 100%;
+      font-size: 62.5%;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100%;
+      font-family: 'Baloo Paaji 2', cursive;
+      font-size: 1.6rem;
+    }
+
+    footer {
+      position: absolute;
+      right: 0;
+      left: 0;
+      height: 5rem;
+      background-color: #eee;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #eee;
+      padding: 1.5rem 2rem;
+    }
+
+    .header svg {
+      width: 18rem;
+    }
+
+    .menu {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: currentColor;
+      padding: 0.5rem 1.4rem;
+      font-size: 1.4rem;
+    }
+
+    .site-identity {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 4rem;
+    }
+
+    .header-top-bar {
+      background-color: darkcyan;
+      color: white;
+      padding: 0 2rem;
+      text-align: right;
+    }
+  </style>
+</head>
+
+<body>
+  <macaw-header>
+    <div
+      class="header-top-bar"
+      slot="top"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    </div>
+    <div class="header">
+      <a id="logo" class="site-identity" href="/" title="Company">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 177.778 100"><path d="M40.99 58.759L23.05 46.384c-1.818-1.254-1.2-3.865 1.067-4.479l19.067-5.175a2.7 2.7 0 013.616 2.492l-1.13 17.549c-.134 2.083-2.862 3.242-4.68 1.988z" fill="#e9327c"/><path d="M35.3 61.814L24.731 41.145a2.883 2.883 0 013.007-4.161l19.587 3.023a2.883 2.883 0 012.127 4.162l-9.023 17.646a2.883 2.883 0 01-5.129-.001z" fill="#1dace3"/><path d="M46.752 39.918l-9.764-1.507L25 41.666l4.785 9.361 11.205 7.732a2.888 2.888 0 00.806.383l4.256-8.323zM96.209 42.334a1.835 1.835 0 111.835 1.835 1.854 1.854 0 01-1.835-1.835zm.306 2.732h3.059V55.26h-3.059zM112.784 50.163a5.119 5.119 0 01-4.872 5.383 3.829 3.829 0 01-3.038-1.244v5.036h-3.058V45.066h3.058v.958a3.829 3.829 0 013.038-1.243 5.118 5.118 0 014.872 5.382zm-3.058 0a2.427 2.427 0 10-2.426 2.488 2.327 2.327 0 002.426-2.488zM122.223 52.2c0 2.345-2.039 3.344-4.241 3.344a4.463 4.463 0 01-4.383-2.427l2.65-1.508a1.675 1.675 0 001.733 1.2c.734 0 1.1-.225 1.1-.632 0-1.122-5.015-.53-5.015-4.058 0-2.222 1.875-3.343 4-3.343a4.46 4.46 0 013.975 2.181l-2.609 1.407a1.481 1.481 0 00-1.366-.9c-.53 0-.856.2-.856.571-.003 1.17 5.012.395 5.012 4.165zM133.4 45.066V55.26h-3.058v-.96a3.489 3.489 0 01-2.916 1.244c-2.059 0-3.812-1.468-3.812-4.221v-6.257h3.058v5.811a1.681 1.681 0 001.774 1.855c1.121 0 1.9-.652 1.9-2.1v-5.566zM150.928 49v6.26h-3.058v-5.994c0-1.019-.49-1.672-1.468-1.672-1.02 0-1.59.714-1.59 1.917v5.749h-3.059v-5.994c0-1.019-.489-1.672-1.468-1.672-1.019 0-1.59.714-1.59 1.917v5.749h-3.058V45.066h3.063V46a3.129 3.129 0 012.732-1.223 3.034 3.034 0 012.671 1.345 3.359 3.359 0 012.957-1.345c2.34.004 3.868 1.675 3.868 4.223z" fill="#001a49"/><circle cx="153.519" cy="42.733" r="2.27" fill="#001a49"/><path d="M54.457 40.377h3.059V55.26h-3.059zm4.791 9.786a5.4 5.4 0 115.4 5.383 5.343 5.343 0 01-5.4-5.383zm7.748 0a2.345 2.345 0 10-2.345 2.406A2.287 2.287 0 0067 50.163zm15.249-5.1v9.685c0 3.425-2.671 4.872-5.382 4.872a5.212 5.212 0 01-4.832-2.467l2.609-1.509a2.331 2.331 0 002.325 1.285 2.032 2.032 0 002.3-2.181v-.938a3.622 3.622 0 01-2.977 1.325 5.181 5.181 0 010-10.357 3.622 3.622 0 012.977 1.325v-1.04zm-2.976 4.893a2.47 2.47 0 10-2.469 2.369 2.308 2.308 0 002.469-2.366zm4.708.2a5.4 5.4 0 115.4 5.383 5.343 5.343 0 01-5.4-5.376zm7.748 0a2.346 2.346 0 10-2.345 2.406 2.287 2.287 0 002.345-2.399z" fill="#001a49"/></svg>
+      </a>
+      <nav
+        class="header-menu">
+        <ul class="menu clearfix">
+          <li><a href="/home">Home</a></li>
+          <li><a href="/about">About us</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </macaw-header>
+  <main>
+    <h1>Hello world</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id orci sem. Vivamus pellentesque iaculis orci, non venenatis nulla. Nulla facilisi. Cras vitae nisi id sapien vehicula aliquam vitae non ante. Maecenas diam orci, pellentesque vitae rutrum pharetra, suscipit hendrerit dui. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam id dolor vehicula, efficitur erat sollicitudin, mollis massa. Nam sodales velit vitae auctor varius. Integer tincidunt orci enim, ac interdum eros euismod at. Proin suscipit congue erat, nec lacinia turpis aliquam eu.
+
+Suspendisse potenti. Donec aliquet eget lorem at egestas. Etiam ac odio viverra, eleifend libero id, consequat enim. Curabitur quis ipsum erat. Morbi dictum, quam quis varius vestibulum, nibh lacus pharetra felis, non accumsan libero ligula in ipsum. Nunc erat erat, molestie ac ipsum ac, maximus pharetra justo. Aliquam erat volutpat. Praesent arcu nisi, laoreet nec nisl eget, consectetur feugiat risus. Maecenas porttitor erat a arcu porta, a hendrerit nisi feugiat. Cras dapibus mi non erat vehicula consectetur. Ut molestie aliquam elit, non accumsan risus suscipit nec. Nam mollis ante eu ex imperdiet, eget laoreet est lacinia.
+
+Aliquam egestas velit ac elit pharetra, sit amet gravida sem pellentesque. Cras hendrerit, turpis vel efficitur consequat, enim ligula vestibulum magna, non iaculis mauris diam porta risus. Duis scelerisque sollicitudin mauris pretium euismod. Nunc porttitor augue et libero commodo fringilla. Proin placerat lacus eget tellus consequat commodo. Vivamus scelerisque gravida nisl, quis tristique dolor posuere nec. Donec eu nisi non erat commodo cursus. Nullam malesuada, leo ut posuere mollis, dolor libero accumsan nibh, non eleifend nulla felis a orci. Quisque placerat id neque id scelerisque. Nullam lorem leo, ornare eget leo et, semper maximus diam.
+
+Proin at arcu id nibh rhoncus dignissim ac ut nunc. Morbi tincidunt massa a egestas rutrum. Sed scelerisque mi et tortor vehicula, ac consectetur dui bibendum. Ut elit magna, viverra sed magna a, accumsan venenatis tortor. Maecenas consequat nisi et lobortis feugiat. Vestibulum velit diam, interdum eget quam a, vehicula eleifend massa. Aliquam bibendum lacus ut est semper vehicula. Nam et orci tellus.
+
+Fusce placerat, nisi congue molestie hendrerit, magna metus aliquam neque, vitae dictum dolor sapien ac neque. Fusce maximus, lacus sit amet gravida scelerisque, lectus nibh hendrerit augue, id feugiat justo ligula vel dolor. Sed volutpat malesuada consectetur. Vestibulum ac augue a leo euismod suscipit eu sit amet dui. Nunc laoreet, diam id cursus pretium, nibh lorem sollicitudin diam, vel sodales diam magna at metus. Suspendisse dignissim aliquam massa id mattis. Aliquam erat volutpat. In in efficitur diam. Phasellus posuere vehicula justo, et pulvinar ante tincidunt eget.
+
+Integer sed justo sit amet velit lobortis lobortis. Pellentesque lorem sem, malesuada ac dolor scelerisque, mollis fermentum sem. Vestibulum suscipit magna a mauris euismod tempus. Vestibulum scelerisque erat gravida, cursus nibh sed, faucibus augue. Nam tincidunt dui sed felis rutrum volutpat. Sed vel est non tortor consequat aliquet. Pellentesque faucibus lacus libero, venenatis mattis nulla condimentum id. Quisque eget maximus felis, id congue enim. Fusce metus enim, feugiat non consectetur mattis, pharetra at velit. Aliquam placerat felis augue, a dignissim dui pulvinar vel. Nunc id venenatis enim. Nulla faucibus felis eget erat consectetur, eget molestie diam elementum. Sed nunc libero, dictum nec dignissim et, aliquam nec justo.
+
+In lobortis mi in metus hendrerit convallis. Vivamus a nibh aliquam, fringilla dolor sed, molestie enim. Duis ac mauris eros. Proin sed tellus a urna varius dictum vel vitae justo. Proin sit amet cursus augue, in faucibus nisl. Praesent turpis diam, venenatis sit amet neque sit amet, eleifend bibendum tellus. Duis commodo finibus nunc, eget dignissim erat volutpat eget. Nulla facilisi. Cras eu est velit. Nullam id ipsum vitae elit pharetra accumsan. Ut ac sagittis ante, vitae consequat nibh. Suspendisse sollicitudin gravida tempor. Quisque aliquam nisi maximus convallis tincidunt. Morbi vulputate est lorem, nec suscipit sapien porttitor blandit.
+
+Aliquam erat volutpat. Etiam semper venenatis lacus, et tristique magna auctor ut. Aenean volutpat felis tortor, quis interdum quam aliquet sed. Donec tincidunt semper facilisis. Etiam nec placerat ex. Vivamus tincidunt auctor sagittis. Proin sapien augue, blandit vitae lacus ac, vestibulum faucibus magna. Etiam sapien elit, iaculis eget elit id, facilisis tristique metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas volutpat velit ac justo pellentesque, facilisis auctor nisl accumsan. Vivamus eget sapien in mauris vulputate pellentesque non nec lacus. Nunc tortor est, malesuada eget nibh ac, cursus imperdiet arcu. Proin fringilla, diam vel pellentesque bibendum, leo lorem maximus felis, facilisis mollis nulla urna id nunc. Donec sed erat commodo, commodo arcu non, efficitur risus. Donec condimentum sed nulla id posuere. Sed quis felis leo.
+
+In hac habitasse platea dictumst. Donec vel viverra nisl. Duis eu aliquet velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec lobortis luctus metus, eget efficitur dui fermentum quis. Suspendisse a metus et augue tincidunt pellentesque. Aenean sit amet mollis leo, in semper enim. Quisque aliquam arcu non urna semper ultrices. Pellentesque turpis urna, viverra non fermentum luctus, sagittis et felis. Vestibulum placerat tristique enim, sodales sagittis odio imperdiet vel. Curabitur eget sapien eros. Nunc tempus odio risus, nec eleifend leo convallis vel. Morbi vel urna feugiat, suscipit turpis vel, ultricies augue. Suspendisse potenti.
+
+Ut scelerisque magna sed lorem sollicitudin, vitae lacinia lectus feugiat. Ut et nunc arcu. Donec porttitor, justo eu fringilla cursus, sapien nunc mattis diam, id rutrum velit velit sit amet sem. Aenean eleifend aliquet quam. Integer non turpis nisl. Fusce nec metus eu ligula convallis ullamcorper nec sit amet arcu. Vestibulum placerat dolor ac tellus iaculis, eu vestibulum velit dapibus. Aliquam ornare quam et vehicula rutrum. Curabitur placerat facilisis luctus. Morbi nec faucibus metus. Maecenas egestas fringilla tellus, a semper nibh scelerisque ac. Nulla lobortis arcu lorem, ut pretium justo tincidunt vitae. Cras congue tellus eu nibh efficitur tincidunt. Vestibulum in quam luctus, aliquet diam sed, volutpat orci. Aenean sapien est, pulvinar ut iaculis sed, bibendum ultrices nulla. Ut molestie ex ac orci tristique, sed porta sem tincidunt.
+
+Etiam a nulla ornare, scelerisque lacus et, efficitur nulla. Pellentesque viverra, sem eu cursus faucibus, odio quam cursus lacus, vitae pellentesque felis mauris eu ligula. Ut lobortis commodo magna. Nulla orci neque, fermentum pretium ligula facilisis, mollis sagittis lacus. Quisque eu est vitae odio ultrices maximus. Duis facilisis quam iaculis leo lacinia scelerisque. Nullam in iaculis turpis. Aliquam interdum sapien id urna egestas, in luctus mauris dictum. Aenean interdum maximus tristique. Fusce quam libero, lobortis in ultricies at, ornare eu augue. Sed leo quam, porta sit amet commodo vel, cursus quis sem.
+
+Maecenas euismod justo rhoncus mi porttitor facilisis. Pellentesque tempor non enim id egestas. Maecenas id aliquet ante, ultricies tristique arcu. Quisque sed ante in metus sollicitudin ullamcorper ut vitae nisl. Aenean pretium libero id consequat molestie. Duis pharetra elit id posuere tempor. Proin erat dolor, semper eget sapien vel, pulvinar lobortis dolor. Mauris suscipit elit porta justo bibendum, sit amet pretium tellus efficitur. In pellentesque quis purus eget bibendum. Vivamus semper mauris ipsum, vitae semper risus consectetur non. Nullam iaculis sapien nisl, in accumsan tortor auctor vitae. Integer pellentesque diam non nibh lacinia laoreet. Pellentesque euismod vel elit nec malesuada.
+
+Sed non odio ut libero euismod finibus. Aenean tempor accumsan fringilla. Duis a magna mauris. Maecenas rutrum urna tellus, at pharetra libero tempor sit amet. Curabitur lobortis arcu lectus, quis posuere lorem venenatis a. Donec finibus nunc ac arcu egestas tempor. Proin sagittis, dui sit amet vehicula porttitor, magna ante rhoncus libero, vitae pulvinar est nibh quis arcu. Nulla facilisi. Vestibulum mollis augue sit amet faucibus lacinia. Morbi eros turpis, malesuada eu fringilla vel, varius vel metus. Duis vel tempus nisl, eu viverra justo. Aliquam erat volutpat. Vestibulum sit amet tortor ac augue sollicitudin ultricies. Phasellus accumsan non velit sit amet volutpat.
+
+In finibus dui quis enim faucibus congue. Pellentesque ullamcorper vel nisi vitae dictum. Mauris et lectus posuere, fringilla velit a, sagittis nisl. Pellentesque pretium erat a neque volutpat egestas. Mauris maximus, lectus vitae facilisis molestie, ipsum metus maximus tellus, quis cursus tellus urna et metus. Etiam rutrum, ligula id efficitur finibus, ipsum ligula aliquam lacus, in euismod erat metus quis massa. Sed in odio neque. Curabitur lacinia nulla nibh, eget dapibus eros auctor eu. Aenean felis diam, sagittis in scelerisque eget, maximus a eros. In in massa congue, semper lorem sed, suscipit nulla. Vestibulum sit amet erat laoreet, faucibus nunc eu, accumsan orci.
+
+Nam tristique lobortis erat ut ultrices. Nullam sed neque leo. Nunc posuere ullamcorper metus a faucibus. Phasellus ac neque erat. Nulla non facilisis nisl. Cras volutpat ullamcorper sem, a posuere ipsum vestibulum non. Ut consectetur pulvinar volutpat. Ut id elit pharetra lectus dapibus suscipit in a eros. Fusce porttitor neque risus, at lacinia sem maximus vel.
+
+Proin bibendum, lorem at vehicula facilisis, nisl enim convallis elit, vitae suscipit urna mauris a arcu. Pellentesque vel ante iaculis, elementum tortor et, luctus mauris. Donec luctus, lorem sit amet lacinia dignissim, metus nibh eleifend turpis, sit amet laoreet ante purus nec velit. Cras pellentesque efficitur purus eu egestas. Duis tempor, mauris at imperdiet tempus, mauris dolor placerat purus, auctor bibendum metus lectus ornare turpis. Aliquam massa felis, faucibus vitae leo sit amet, rhoncus consectetur arcu. Sed ut egestas quam. Quisque congue, nisl nec vehicula blandit, magna orci fermentum justo, hendrerit viverra odio velit in dui. Cras at aliquam nulla. Ut id dolor vehicula, sollicitudin turpis eu, fringilla eros. Suspendisse luctus enim at dolor fringilla molestie. Aenean viverra, massa ut hendrerit tempor, nibh odio suscipit nibh, ac auctor erat arcu at ex.
+
+Phasellus vulputate placerat arcu, ut consectetur arcu egestas sed. Proin mollis vestibulum mi, quis interdum elit molestie vel. Maecenas at ultricies erat. Nullam non nibh sem. Vestibulum eros ipsum, pellentesque vel fringilla eget, fringilla at mi. Morbi sit amet ex orci. Fusce pulvinar ut enim ac tempus. Curabitur gravida, massa a cursus auctor, nisi lacus malesuada ex, nec auctor urna massa vitae lorem. In imperdiet lacus eget leo ultricies rutrum. Nam blandit pretium auctor. Morbi placerat dolor sit amet turpis tincidunt, eget hendrerit neque congue. Aliquam neque ligula, pharetra vitae luctus at, tincidunt nec libero. Morbi non ipsum elit.
+
+Donec at dignissim odio. Sed placerat sollicitudin semper. Aliquam erat volutpat. Aliquam a bibendum lectus. Fusce aliquet in mi eu hendrerit. Quisque a augue et turpis viverra convallis. Nulla facilisi. Vestibulum elementum sapien vitae sodales facilisis. Aenean tristique orci bibendum massa tincidunt sollicitudin. Sed vestibulum leo tellus, ac luctus dui blandit non. In hac habitasse platea dictumst. Nulla eu tristique dolor. Integer eget dolor nec velit tempor pulvinar et ac mi. Nunc sed consequat mauris. Proin vitae lectus quis sem hendrerit euismod. Etiam consequat orci finibus, imperdiet libero nec, varius neque.
+
+Nulla facilisi. Suspendisse condimentum ligula in venenatis cursus. Vestibulum viverra, sapien sit amet efficitur dictum, leo dui suscipit orci, sed commodo mauris tellus eu ante. Suspendisse tempus elit non elit dignissim, feugiat auctor purus viverra. Vestibulum sed lectus condimentum enim aliquet semper sed ac massa. Proin vitae nunc sed nulla vestibulum aliquam. Suspendisse eu leo id tortor consequat blandit. Suspendisse consequat, lacus at viverra efficitur, arcu turpis venenatis nulla, convallis eleifend libero lectus ut dolor. Ut eu finibus orci. Praesent ligula odio, ultrices eget pellentesque vel, tincidunt et turpis. Duis et tortor lectus. Aliquam lacinia mauris vitae massa aliquam aliquet. Sed luctus iaculis felis, at dictum ligula ullamcorper vitae. Pellentesque in sagittis neque. In sollicitudin ac est in volutpat.
+
+Integer sit amet rutrum ex. In blandit, ipsum quis interdum accumsan, dui arcu sagittis eros, vestibulum varius purus ante et odio. Vestibulum nec laoreet mi. Donec sed est sed neque posuere dapibus non vestibulum libero. Sed pellentesque nisl vel sapien semper, non rutrum felis mollis. Pellentesque a quam vitae augue sagittis mollis commodo at sem. Aliquam id nunc ac massa viverra eleifend a eu elit.
+    </p>
+  </main>
+  <footer></footer>
+  <script>
+    const header = document.querySelector('macaw-header');
+    header.addEventListener('mwcHeaderInit', (event) => console.log('mwcHeaderInit', event.detail))
+    header.addEventListener('mwcHeaderHeight', (event) => console.log('mwcHeaderHeight', event.detail))
+    header.addEventListener('mwcHeaderSticky', (event) => console.log('mwcHeaderSticky', event.detail))
+    header.addEventListener('mwcHeaderVisible', (event) => console.log('mwcHeaderVisible', event.detail))
+  </script>
+</body>
+
+</html>

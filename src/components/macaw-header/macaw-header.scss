@@ -1,0 +1,34 @@
+.mwc-header {
+  width: 100%;
+}
+
+.header-wrapper {
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  :host([sticky]) & {    
+    position: fixed;
+    transition-duration: var(--mwc-header-transition-duration, 300ms);
+    transition-timing-function: var(--mwc-header-timing-function, ease-in-out);
+    &--slide {
+      transition-property: transform;
+    }
+    &--fade {
+      transition-property: opacity;
+    }
+  }
+  &--slide {
+    &.hide {
+      transform: translateY(-100%);
+    }
+  }
+  &--fade {
+    &.hide {
+      opacity: 0;
+    }
+  }
+}
