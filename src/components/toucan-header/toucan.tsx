@@ -2,11 +2,11 @@ import { Component, h, Element, State, Prop, Watch, Event, EventEmitter, Method 
 import { ResizeObserver } from 'resize-observer';
 
 @Component({
-  tag: 'macaw-header',
-  styleUrl: './macaw-header.scss',
+  tag: 'toucan-header',
+  styleUrl: './toucan-header.scss',
   shadow: true,
 })
-export class MacawHeader {
+export class ToucanHeader {
   @Element() el: HTMLElement;
   @State() header: HTMLElement;
   @State() headerHeight: number = 0;
@@ -32,26 +32,26 @@ export class MacawHeader {
   @Event({
     bubbles: true,
     composed: true,
-  }) mwcHeaderInit: EventEmitter<object>;
+  }) twcHeaderInit: EventEmitter<object>;
   @Event({
     bubbles: true,
     composed: true,
-  }) mwcHeaderHeight: EventEmitter<object>;
+  }) twcHeaderHeight: EventEmitter<object>;
   @Event({
     bubbles: true,
     composed: true,
-  }) mwcHeaderSticky: EventEmitter<object>;
+  }) twcHeaderSticky: EventEmitter<object>;
   @Event({
     bubbles: true,
     composed: true,
-  }) mwcHeaderVisible: EventEmitter<object>;
+  }) twcHeaderVisible: EventEmitter<object>;
 
   @Watch('headerHeight')
   headerHeightChanged(newValue: string, oldValue: string) {
     if (newValue === oldValue) {
       return;
     }
-    this.mwcHeaderHeight.emit(this.getSettings());
+    this.twcHeaderHeight.emit(this.getSettings());
     this.headerOffsetHeight = `${this.headerHeight}px`
   }
 
@@ -60,7 +60,7 @@ export class MacawHeader {
     if (newValue === oldValue) {
       return;
     }
-    this.mwcHeaderSticky.emit(this.getSettings());
+    this.twcHeaderSticky.emit(this.getSettings());
     this.setHeaderVisibility();
   }
 
@@ -69,7 +69,7 @@ export class MacawHeader {
     if (newValue === oldValue) {
       return;
     }
-    this.mwcHeaderVisible.emit(this.getSettings());
+    this.twcHeaderVisible.emit(this.getSettings());
     this.setHeaderVisibility();
   }
 
@@ -95,7 +95,7 @@ export class MacawHeader {
   }
 
   /**
-   * Change the settings of the Macaw Header Component, returns the current settings.
+   * Change the settings of the Toucan Header Component, returns the current settings.
    * @param {object} settings
    * @returns {promise}
    */
@@ -129,16 +129,16 @@ export class MacawHeader {
 
   componentDidLoad() {
     this.sticky = false;
-    this.header = this.el.shadowRoot.querySelector('#mwcHeader');
+    this.header = this.el.shadowRoot.querySelector('#twcHeader');
     this.headerHeight = this.header.clientHeight;
-    const headerTop = this.el.shadowRoot.querySelector('#mwcHeaderTop');
+    const headerTop = this.el.shadowRoot.querySelector('#twcHeaderTop');
     this.headerTopHeight = headerTop ? headerTop.clientHeight : 0;
     const resizeObserver = new ResizeObserver((entries) => {
       this.headerHeight = entries[0].target.clientHeight;
     });
     resizeObserver.observe(this.header);
     window.addEventListener('scroll', this.onScroll.bind(this));
-    this.mwcHeaderInit.emit(this.el);
+    this.twcHeaderInit.emit(this.el);
   }
 
   componentDidUnload() {
@@ -168,19 +168,19 @@ export class MacawHeader {
 
   render() {
     return [
-      <header class="mwc-header">
+      <header class="twc-header">
         <div
-            id="mwcHeaderTop"
+            id="twcHeaderTop"
           >
           <slot name="top"></slot>
         </div>
         <div
-          id="mwcHeaderSpacer"
+          id="twcHeaderSpacer"
           class="header-wrapper"
           style={{ height: this.headerOffsetHeight }}
         >
           <div
-            id="mwcHeader"
+            id="twcHeader"
             class={`
               header
               header--${this.transitionStyle}

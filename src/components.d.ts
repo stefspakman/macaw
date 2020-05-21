@@ -6,7 +6,7 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MacawHeader {
+    interface ToucanHeader {
         /**
           * Returns the current settings.
           * @returns
@@ -17,7 +17,7 @@ export namespace Components {
             visible: boolean;
         }>;
         /**
-          * Change the settings of the Macaw Header Component, returns the current settings.
+          * Change the settings of the Toucan Header Component, returns the current settings.
           * @param settings
           * @returns
          */
@@ -33,36 +33,36 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLMacawHeaderElement extends Components.MacawHeader, HTMLStencilElement {
+    interface HTMLToucanHeaderElement extends Components.ToucanHeader, HTMLStencilElement {
     }
-    var HTMLMacawHeaderElement: {
-        prototype: HTMLMacawHeaderElement;
-        new (): HTMLMacawHeaderElement;
+    var HTMLToucanHeaderElement: {
+        prototype: HTMLToucanHeaderElement;
+        new (): HTMLToucanHeaderElement;
     };
     interface HTMLElementTagNameMap {
-        "macaw-header": HTMLMacawHeaderElement;
+        "toucan-header": HTMLToucanHeaderElement;
     }
 }
 declare namespace LocalJSX {
-    interface MacawHeader {
-        "onMwcHeaderHeight"?: (event: CustomEvent<object>) => void;
-        "onMwcHeaderInit"?: (event: CustomEvent<object>) => void;
-        "onMwcHeaderSticky"?: (event: CustomEvent<object>) => void;
-        "onMwcHeaderVisible"?: (event: CustomEvent<object>) => void;
+    interface ToucanHeader {
+        "onTwcHeaderHeight"?: (event: CustomEvent<object>) => void;
+        "onTwcHeaderInit"?: (event: CustomEvent<object>) => void;
+        "onTwcHeaderSticky"?: (event: CustomEvent<object>) => void;
+        "onTwcHeaderVisible"?: (event: CustomEvent<object>) => void;
         "sticky"?: boolean;
         "transitionStyle"?: "slide" | "fade";
         "visibility"?: "always" | "to-top" | "hidden";
         "visible"?: boolean;
     }
     interface IntrinsicElements {
-        "macaw-header": MacawHeader;
+        "toucan-header": ToucanHeader;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "macaw-header": LocalJSX.MacawHeader & JSXBase.HTMLAttributes<HTMLMacawHeaderElement>;
+            "toucan-header": LocalJSX.ToucanHeader & JSXBase.HTMLAttributes<HTMLToucanHeaderElement>;
         }
     }
 }

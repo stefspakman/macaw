@@ -1,7 +1,7 @@
 {
-  "name": "macaw-components",
+  "name": "@toucan-components/toucan-components",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "Toucan Web Components",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "es2015": "dist/esm/index.mjs",
@@ -9,7 +9,8 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/macaw-components/macaw-components.js",
+  "unpkg": "dist/toucan-components/toucan-components.js",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "files": [
     "dist/",
     "loader/"
@@ -24,6 +25,7 @@
   "devDependencies": {
     "@stencil/core": "^1.12.2"
   },
+  "author": "Stef Spakman <twc@stefspakman.com>",
   "license": "MIT",
   "dependencies": {
     "resize-observer": "^1.0.0"

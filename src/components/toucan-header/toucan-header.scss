@@ -1,4 +1,4 @@
-.mwc-header {
+.twc-header {
   width: 100%;
 }
 
@@ -12,8 +12,8 @@
   top: 0;
   :host([sticky]) & {    
     position: fixed;
-    transition-duration: var(--mwc-header-transition-duration, 300ms);
-    transition-timing-function: var(--mwc-header-timing-function, ease-in-out);
+    transition-duration: var(--twc-header-transition-duration, 300ms);
+    transition-timing-function: var(--twc-header-timing-function, ease-in-out);
     &--slide {
       transition-property: transform;
     }

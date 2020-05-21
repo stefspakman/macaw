@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-  <title>Macaw Demo</title>
-  <script src="/dist/macaw-components/macaw-components.js"></script>
+  <title>Toucan Demo</title>
+  <script src="/dist/toucan-components/toucan-components.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap" rel="stylesheet">
   <style>
     * {
@@ -75,7 +75,7 @@
 </head>
 
 <body>
-  <macaw-header>
+  <toucan-header>
     <div
       class="header-top-bar"
       slot="top"
@@ -89,14 +89,14 @@
       <nav
         class="header-menu">
         <ul class="menu clearfix">
-          <li><a href="/home">Home</a></li>
-          <li><a href="/about">About us</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="#">Lorem</a></li>
+          <li><a href="#">Ipsum</a></li>
+          <li><a href="#">Dolor</a></li>
+          <li><a href="#">Sit Amet</a></li>
         </ul>
       </nav>
     </div>
-  </macaw-header>
+  </toucan-header>
   <main>
     <h1>Hello world</h1>
     <p>
@@ -143,11 +143,11 @@ Integer sit amet rutrum ex. In blandit, ipsum quis interdum accumsan, dui arcu s
   </main>
   <footer></footer>
   <script>
-    const header = document.querySelector('macaw-header');
-    header.addEventListener('mwcHeaderInit', (event) => console.log('mwcHeaderInit', event.detail))
-    header.addEventListener('mwcHeaderHeight', (event) => console.log('mwcHeaderHeight', event.detail))
-    header.addEventListener('mwcHeaderSticky', (event) => console.log('mwcHeaderSticky', event.detail))
-    header.addEventListener('mwcHeaderVisible', (event) => console.log('mwcHeaderVisible', event.detail))
+    const header = document.querySelector('toucan-header');
+    header.addEventListener('twcHeaderInit', (event) => console.log('twcHeaderInit', event.detail))
+    header.addEventListener('twcHeaderHeight', (event) => console.log('twcHeaderHeight', event.detail))
+    header.addEventListener('twcHeaderSticky', (event) => console.log('twcHeaderSticky', event.detail))
+    header.addEventListener('twcHeaderVisible', (event) => console.log('twcHeaderVisible', event.detail))
   </script>
 </body>
 

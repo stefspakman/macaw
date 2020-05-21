@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <title>Stencil Component Starter</title>
 
-  <script type="module" src="/build/macaw-components.esm.js"></script>
-  <script nomodule src="/build/macaw-components.js"></script>
+  <script type="module" src="/build/toucan-components.esm.js"></script>
+  <script nomodule src="/build/toucan-components.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&display=swap" rel="stylesheet">
   <style>
     * {
@@ -77,7 +77,7 @@
 </head>
 
 <body>
-  <macaw-header>
+  <toucan-header>
     <div
       class="header-top-bar"
       slot="top"
@@ -98,7 +98,7 @@
         </ul>
       </nav>
     </div>
-  </macaw-header>
+  </toucan-header>
   <main>
     <h1>Hello world</h1>
     <p>
@@ -145,11 +145,11 @@ Integer sit amet rutrum ex. In blandit, ipsum quis interdum accumsan, dui arcu s
   </main>
   <footer></footer>
   <script>
-    const header = document.querySelector('macaw-header');
-    header.addEventListener('mwcHeaderInit', (event) => console.log('mwcHeaderInit', event.detail))
-    header.addEventListener('mwcHeaderHeight', (event) => console.log('mwcHeaderHeight', event.detail))
-    header.addEventListener('mwcHeaderSticky', (event) => console.log('mwcHeaderSticky', event.detail))
-    header.addEventListener('mwcHeaderVisible', (event) => console.log('mwcHeaderVisible', event.detail))
+    const header = document.querySelector('toucan-header');
+    header.addEventListener('twcHeaderInit', (event) => console.log('twcHeaderInit', event.detail))
+    header.addEventListener('twcHeaderHeight', (event) => console.log('twcHeaderHeight', event.detail))
+    header.addEventListener('twcHeaderSticky', (event) => console.log('twcHeaderSticky', event.detail))
+    header.addEventListener('twcHeaderVisible', (event) => console.log('twcHeaderVisible', event.detail))
   </script>
 </body>
 

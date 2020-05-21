@@ -1,4 +1,4 @@
-# macaw-header
+# toucan-header
 
 
 
@@ -19,10 +19,10 @@
 
 | Event              | Description | Type                  |
 | ------------------ | ----------- | --------------------- |
-| `mwcHeaderHeight`  |             | `CustomEvent<object>` |
-| `mwcHeaderInit`    |             | `CustomEvent<object>` |
-| `mwcHeaderSticky`  |             | `CustomEvent<object>` |
-| `mwcHeaderVisible` |             | `CustomEvent<object>` |
+| `twcHeaderHeight`  |             | `CustomEvent<object>` |
+| `twcHeaderInit`    |             | `CustomEvent<object>` |
+| `twcHeaderSticky`  |             | `CustomEvent<object>` |
+| `twcHeaderVisible` |             | `CustomEvent<object>` |
 
 
 ## Methods
@@ -39,7 +39,7 @@ Type: `Promise<{ height: number; sticky: boolean; visible: boolean; }>`
 
 ### `setSettings(settings: any) => Promise<{ height: number; sticky: boolean; visible: boolean; }>`
 
-Change the settings of the Macaw Header Component, returns the current settings.
+Change the settings of the Toucan Header Component, returns the current settings.
 
 #### Returns
 
