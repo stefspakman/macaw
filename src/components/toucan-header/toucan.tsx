@@ -2,7 +2,7 @@ import { Component, h, Element, State, Prop, Watch, Event, EventEmitter, Method 
 import { ResizeObserver } from 'resize-observer';
 
 @Component({
-  tag: 'toucan-header',
+  tag: 'twc-header',
   styleUrl: './toucan-header.scss',
   shadow: true,
 })

@@ -6,7 +6,7 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface ToucanHeader {
+    interface TwcHeader {
         /**
           * Returns the current settings.
           * @returns
@@ -33,18 +33,18 @@ export namespace Components {
     }
 }
 declare global {
-    interface HTMLToucanHeaderElement extends Components.ToucanHeader, HTMLStencilElement {
+    interface HTMLTwcHeaderElement extends Components.TwcHeader, HTMLStencilElement {
     }
-    var HTMLToucanHeaderElement: {
-        prototype: HTMLToucanHeaderElement;
-        new (): HTMLToucanHeaderElement;
+    var HTMLTwcHeaderElement: {
+        prototype: HTMLTwcHeaderElement;
+        new (): HTMLTwcHeaderElement;
     };
     interface HTMLElementTagNameMap {
-        "toucan-header": HTMLToucanHeaderElement;
+        "twc-header": HTMLTwcHeaderElement;
     }
 }
 declare namespace LocalJSX {
-    interface ToucanHeader {
+    interface TwcHeader {
         "onTwcHeaderHeight"?: (event: CustomEvent<object>) => void;
         "onTwcHeaderInit"?: (event: CustomEvent<object>) => void;
         "onTwcHeaderSticky"?: (event: CustomEvent<object>) => void;
@@ -55,14 +55,14 @@ declare namespace LocalJSX {
         "visible"?: boolean;
     }
     interface IntrinsicElements {
-        "toucan-header": ToucanHeader;
+        "twc-header": TwcHeader;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "toucan-header": LocalJSX.ToucanHeader & JSXBase.HTMLAttributes<HTMLToucanHeaderElement>;
+            "twc-header": LocalJSX.TwcHeader & JSXBase.HTMLAttributes<HTMLTwcHeaderElement>;
         }
     }
 }
